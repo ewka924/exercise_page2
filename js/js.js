@@ -24,7 +24,6 @@ function init(){
 	window.setInterval(function(){
 		if(counter === 0){
 		counter = slider.length; //2
-		console.log(counter);
 	}
 	slideLeft();
 }, 3000);
@@ -70,36 +69,35 @@ init();
 
 /* Counter */
 
-
-let items = document.querySelectorAll('.item');
-let incrementCounter = 0;
-let interval;
 function count(){
-	for(let i of items){
-		if(incrementCounter <= i.dataset.count){
-			i.innerHTML = incrementCounter;
-			incrementCounter ++;
-		}else if(incrementCounter > i.dataset.count){
-			clearInterval(iterval);
-		}
-	}
-	iterval  = setInterval(count, 30);
+	const items = document.querySelectorAll('.item'),
+    animationTime = 3000;
+    const counter = document.querySelector('.counter');
+    let counterPosition = counter.getBoundingClientRect().top;
+    let screenPosition = window.innerHeight;
 
+
+    if(counterPosition < screenPosition){
+    items.forEach((el) =>{
+     	let counterNumber = el.dataset.count;
+     	let c = 0; //licznik
+     	let interval = setInterval(()=>{
+     		if(c > counterNumber){
+     			clearInterval(interval);
+     		}else{
+     			el.innerHTML = c;
+     			c++;
+     		}
+     	}, (animationTime/counterNumber));
+     });
+}
 }
 
-
-
-/* Call function on scroll ivent*/
-
-
-console.log(window);
-document.addEventListener('scroll', function(e){
-	console.log(window.pageYOffset);
-	if(window.pageYOffset > 1200 && window.pageYOffset < 1600){
-		count();
-	}
-});
+window.addEventListener('scroll', count);
 
 
 
 
+
+// element's position
+//.getBoundingClientRect().top 
