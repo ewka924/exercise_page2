@@ -353,3 +353,109 @@ p{
 	padding-right:5rem;
 }
 
+.project-items{
+	display:grid;
+	grid-template-columns: repeat(4, 1fr);
+
+}
+
+
+.project-single{
+	height: 25vw;
+	overflow:hidden;
+	position:relative;
+
+}
+.ps{
+	width:100%;
+	height:100%;
+	background-color:#fff;
+	transition: all .5s ease-out;
+}
+.project-description{
+	position:absolute;
+	top:-8rem;
+	transition: all .5s ease-out;
+	padding: 2rem;
+	color:#fff;
+}
+.project-description span{
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+.project-description h3{
+	font-size: 25px;
+	margin:0;
+}
+.project-link{
+	position:absolute;
+	bottom:-8rem;
+	margin:2rem;
+	width: 60px;
+	height: 60px;
+	border: solid 1px #fff;
+	border-radius:50%;
+	padding: 20px;
+	transition: all .5s ease;
+}
+.project-link i{
+	font-size: 20px;
+	color:#fff;
+}
+/*Hovers*/
+.project-single:hover .ps{
+	transform: scale(1.5);
+	background-color:var(--blue);
+	background-blend-mode: multiply;
+}
+.project-single:hover .project-description{
+	top:0;
+}
+.project-single:hover .project-link{
+	bottom:0;
+}
+
+
+
+
+.ps1{
+	background-image: url('../images/work-1.jpg');
+	background-size: cover;
+	background-repeat:no-repeat;
+
+}
+.ps2{
+	background-image: url('../images/work-2.jpg');
+	background-size: cover;
+
+}
+.ps3{
+	background-image: url('../images/work-3.jpg');
+	background-size: cover;
+
+}
+.ps4{
+	background-image: url('../images/work-4.jpg');
+	background-size: cover;
+
+}
+.ps5{
+	background-image: url('../images/work-5.jpg');
+	background-size: cover;
+
+}
+.ps6{
+	background-image: url('../images/work-6.jpg');
+	background-size: cover;
+
+}
+.ps7{
+	background-image: url('../images/work-7.jpg');
+	background-size: cover;
+
+}
+.ps8{
+	background-image: url('../images/work-8.jpg');
+	background-size: cover;
+
+}
