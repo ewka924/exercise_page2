@@ -97,7 +97,31 @@ window.addEventListener('scroll', count);
 
 
 
+// Testimony slider
+const testimonyItem = document.querySelectorAll('.testimony-item');
+const testimonyButton = document.querySelectorAll('.testimony-button');
 
 
-// element's position
-//.getBoundingClientRect().top 
+
+
+testimonyButton.forEach(el =>{
+	el.addEventListener("click", changeSlide);
+
+});
+
+function changeSlide(){
+	testimonyButton.forEach((el) =>{el.style.background = "#fff";})
+	this.style.background = "var(--blue)";
+
+	let numberOfButton = this.dataset.tbutton;
+	
+	testimonyItem.forEach(e =>{
+		let translateCount = -(e.offsetWidth/16) * numberOfButton + "rem";
+		console.log(translateCount);
+		//e.style.transform = `"translateX(${translateCount})"`;
+		e.style.transform = "translateX("+translateCount+")";
+		e.style.transition = "transform 0.5s ease";
+	});
+};
+
+

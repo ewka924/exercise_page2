@@ -459,3 +459,103 @@ p{
 	background-size: cover;
 
 }
+
+/* Testimony*/
+.testimony{
+	width:100%;
+	padding: 5rem 0;
+}
+.testimony-header{
+	width: 70%;
+	height:100%;
+	padding: 4rem;
+	margin:0 auto;
+}
+.testiomny-header-center .subtitle-general small{
+	background:#fff;
+}
+
+/* Testiony slider*/
+.testimony-slider{
+	width: 65rem;
+	height: 65vh;
+	overflow:hidden;
+	margin:3rem auto;
+	display:grid;
+	grid-auto-flow: column;
+	grid-template-columns: repeat(3, 1fr)
+	justify-content: start;
+	transition:transform 0.5s ease;
+}
+
+.testimony-item{
+	min-width:22rem;
+	padding: 0 4rem 3rem 4rem;
+	/*margin: 2rem 1rem;*/
+	transform: translateX(0);	
+}
+
+.user-image img{
+	width:100px;
+	height: 100px;
+	border-radius:50%;
+	
+}
+.user-image{
+	position:relative;
+	width:150px;
+	
+}
+
+.icon{
+	width: 40px;
+	height: 40px;
+	border-radius:50%;
+	background:#fff;
+	position:absolute;
+	z-index: 10;
+	right:50px;
+	top:60px;
+	font-size:20px;
+	text-align:center;
+	padding:10px;
+	color:var(--blue);
+}
+.user-quote p{
+	border-left:solid 1px var(--blue);
+	padding:0 1rem;
+}
+.user-name{
+	display:block;
+	font-size:16px;
+	font-weight: 700;
+	padding:1rem 1rem;
+}
+.user-job{
+	display:block;
+	font-size:13px;
+	padding:0 1rem;
+}
+
+.testimony-buttons ul{
+	display:flex;
+	list-style-type: none;
+	padding-left:0;
+	width: 20rem;
+	margin:0 auto;
+}
+.testimony-button{
+	width:10px;
+	height: 10px;
+	border-radius: 50%;
+	border:solid 1px var(--blue);
+	margin: 0 1rem;
+	cursor:pointer;
+	pointer-events: auto;
+}
+.testimony-button:hover{
+	background:var(--blue);
+}
+.testimony-button::focus{
+	background:var(--blue);
+}
