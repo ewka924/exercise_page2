@@ -91,6 +91,15 @@ p{
 .menu-container{
 	width:70%;
 }
+
+
+
+
+
+.icon-hamb{
+	font-size:40px;
+	display:none;
+}
 .menu-items{
 	display:flex;
 	justify-content: flex-end;
@@ -105,6 +114,7 @@ p{
 }
 .menu-item a:focus{
 	color:var(--blue);
+
 }
 
 /* Slider */
@@ -146,6 +156,8 @@ p{
 	background:url("../images/bg_1.jpg");
 	background-size: cover;
 }
+
+
 
 .slider2 .rightSide{
 	background:url("../images/bg_2.jpg");
@@ -310,7 +322,7 @@ p{
 }
 .feature-icon::after{
 	content:'';
-	width:16rem;
+	width:10rem;
 	height:2px;
 	background-color: var(--light);
 	position:absolute;
@@ -558,4 +570,232 @@ p{
 }
 .testimony-button::focus{
 	background:var(--blue);
+}
+
+
+/*Team*/
+.team-section{
+	width:100vw;
+}
+.team{
+	width: 100%;
+	display:grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap:4rem;
+	padding:2rem 5rem;
+}
+.team-img {
+	width:100%;
+	height:320px;
+	position:relative;
+	z-index:0;
+}
+#img1{
+	background:url(../images/team-1.jpg);
+	background-size: cover;
+	background-position: top center;
+}
+#img2{
+	background:url(../images/team-2.jpg);
+	background-size: cover;
+	background-position: top center;
+}
+#img3{
+	background:url(../images/team-3.jpg);
+	background-size: cover;
+	background-position: top center;
+}
+#img4{
+	background:url(../images/team-4.jpg);
+	background-size: cover;
+	background-position: top center;
+}
+
+.team-description{
+	width:100%;
+	background:#fff;
+	position:relative;
+	z-index:100;
+	margin-top:0;
+	transition: margin .3s ease;
+	padding: 1rem 0;
+}
+.team-description h3{
+	margin:0;
+}
+.team-description span{
+	color:var(--blue);
+}
+.team-description i{
+	font-size:1.5rem;
+	color: var(--blue);
+}
+.team-item:hover .team-description{
+	margin-top:-50px;
+}
+
+#footer{
+	width: 100%;
+	height:50vh;
+	margin-top:3rem;
+	background: #141313;
+
+}
+
+.container-footer{
+	padding: 2rem;
+	display:grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap:1rem;
+	color:#fff;
+}
+
+#footer h2{
+	font-size:20px;
+	color:#fff;
+}
+.footer-column i{
+	font-size: 1.5rem;
+	margin-right:10px;
+}
+.footer-column p{
+	font-size:16px;
+}
+.footer-column ul{
+	list-style-type: none;
+	padding:0;
+	line-height: 1.8;
+	font-size:16px;
+}
+.news{
+	display:block;
+	width:200px;
+	height: 50px;
+	background: var(--grey);
+}
+.news-button{
+	display:block;
+	width:200px;
+	height: 50px;
+	background: var(--blue);
+	color:#fff;
+	border:none;
+}
+
+
+/*Media Queries*/
+@media screen and (max-width: 800px){
+	p{
+		font-size:14px;
+	}
+	i.icon-hamb{
+		display:block;
+	}
+	.menu-container{
+		display:none;
+		flex-direction: column;
+
+	}
+	.menu-items{
+		display:flex;
+		flex-direction: column;
+		text-align:center;
+	}
+	.menu-items li {
+		background:var(--light);
+		margin:5px;
+	}
+	.container{
+		padding-top:2rem;
+	}
+	.slider-wrapper{
+		display:none; 
+	}
+	.about-image{
+		height:300px;
+	}
+	.about-section{
+		grid-template-columns: 1fr;
+	}
+	.about-container{
+		margin-top:2rem;
+	}
+	.counter{
+		grid-template-columns: 1fr 1fr;
+	}
+	.header-general{
+		grid-template-columns: 1fr;
+	}
+	.workflow-features{
+		grid-template-columns: 1fr;
+	}
+	.services-section{
+		grid-template-columns: 1fr;
+	}
+	.project-items{
+		grid-template-columns: 1fr 1fr;
+	}
+	.project-single{
+	height: 45vw;
+}
+.project-single .ps{
+	background-color:var(--blue);
+	background-blend-mode: multiply;
+}
+	.project-description{
+		top:0;
+	}
+	.project-link{
+		bottom:0;
+	}
+	.testimony-header{
+		width:100%;
+		padding:2rem;
+	}
+	.testimony-slider{
+		width: 40rem;
+	}
+	.team{
+		grid-template-columns: 1fr 1fr;
+	}
+	.container-footer{
+		grid-template-columns: 1fr 1fr;
+	}
+	#footer{
+		height:100vh;
+	}
+}
+
+@media screen and (max-width: 500px){
+	.counter-section{
+		height:100vh;
+	}
+	.counter{
+		grid-template-columns: 1fr;
+	}
+	.project-items{
+		grid-template-columns: 1fr;
+	}
+	.project-link{
+		border:none;
+	}
+	.project-link i{
+		font-size:25px;
+	}
+	.testimony-slider{
+		width: 20rem;
+	}
+	.team{
+		grid-template-columns: 1fr;
+	}
+	.container-footer{
+		grid-template-columns: 1fr;
+	}
+	#footer{
+		height:auto;
+	}
+}
+
+.toggle{
+	display:block;
 }

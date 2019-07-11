@@ -1,3 +1,16 @@
+
+/*Mbile nav*/
+const iconHamb = document.querySelector('.icon-hamb');
+const menuContainer = document.querySelector('.menu-container');
+
+iconHamb.addEventListener('click' , function(){
+		console.log("cos")
+		menuContainer.classList.toggle('toggle');
+	
+});
+
+
+
 /* Slider */
 
 let slider = document.querySelectorAll('.slider');
@@ -124,4 +137,6 @@ function changeSlide(){
 	});
 };
 
+
+// TEAM MEMBERS
 
